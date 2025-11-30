@@ -22,7 +22,7 @@ body {
   p {
   font-size: 1.4vw;
   line-height: 2.5vw;
-  margin-bottom: 2.5vw;
+  margin-bottom: 1.5vw;
   
 }
 
@@ -56,6 +56,7 @@ body {
 
 h3 {
   font-size: 5vw;
+  margin-bottom: 2.5vw;
 }
 
 h4 {
@@ -64,6 +65,9 @@ h4 {
 
 h5 {
   font-size: 1.5vw;
+}
+h6{
+  font-size: 1vw;
 }
 
 img {
@@ -263,9 +267,12 @@ main {
  line-height: 1.5vw;
 }
 
+section{
+
+  background-color: #fdf0e9;
+}
 .clients {
   padding: 1.5vw;
-  background-color: #fdf0e9;
   overflow: hidden;
 }
 
@@ -289,7 +296,7 @@ main {
 
 .about {
   padding: 1vw;
-  background-color: #fdf0e9;
+  /* background-color: #fdf0e9; */
 }
 
 .about h1 {
@@ -307,7 +314,7 @@ main {
 
 .numbers {
   /* padding: 5vw; */
-  background-color: #fdf0e9;
+  /* background-color: #fdf0e9; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -325,7 +332,7 @@ main {
 
 .howWeWork {
   padding: 6vw;
-  background-color: #fdf0e9;
+  /* background-color: #fdf0e9; */
   display: flex;
   align-items: center;
   gap: 18vw;
@@ -377,7 +384,7 @@ main {
   align-items: flex-start;
   gap: 5vw;
   padding: 4vw 6vw;
-  background-color: #fdf0e9;
+  /* background-color: #fdf0e9; */
 }
 
 /* Left Content */
@@ -447,15 +454,43 @@ main {
   height: 2.25vw;
 }
 .service_two{
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
+  padding: 5vw;
 
+  /* gap: 5vw; */
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  flex-direction: column;
+  
+}
+.service_two .service{
+  /* width: 50vw; */
+  /* align-content: left; */
+}
 .service_two_card{
   display: flex;
 }
 
+.testimonials{
+  padding: 5vw;
+
+
+}
+.testimonial_style{
+  text-align: center;
+}
+.testimonial_cards{
+  display: flex;
+}
+.testimonials .card{
+  width: 39.3vw
+}
+.card .star{
+  width: 5vw;
+}
+.pricing{
+  padding: 5vw;
+}
 
 @media (max-width: 1250px) {
   button {
