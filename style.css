@@ -31,6 +31,7 @@ h4 {
 
 h5 {
   font-size: 1.5vw;
+  margin-bottom: 2.5vw;
 }
 h6{
   font-size: 4vw;
@@ -61,7 +62,7 @@ button {
   font-size: 0.8vw;
   padding: 0.75vw 1.5vw;
   border: none;
-  border-radius: 1vw;
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 150ms ease-in-out, border-color 150ms ease-in-out;
   width: auto;
@@ -542,20 +543,37 @@ border-color: #f3d1bf;
 
 .pricing_cards{
   display: flex;
+  align-items: end;
 }
+
+.pricing .card_1{
+ background-color: transparent;
+  border-width: 3px 0px 3px 3px;
+
+}
+.pricing .card_2{
+
+   border-width: 3px 3px 3px 3px;
+
+}
+.pricing .card_3{
+ background-color: transparent;
+
+}
+
 
 .pricing ul {
   list-style: none;
   padding-left: 0;
-  margin-top: 2vw;
+  /* margin-top: 2vw; */
 }
 
 .pricing ul li {
   background: url("images/plus.svg") no-repeat left center;
   background-size: 1.5vw;
-
+/*  */
   padding-left: 2.5vw;
-  margin-bottom: 1vw;
+  /* margin-bottom: 1vw; */
   font-size: 1.2vw;
   line-height: 2.8vw;
 }
@@ -565,24 +583,9 @@ border-color: #f3d1bf;
   background-size: 1.5vw;
 
   padding-left: 2.5vw;
-  margin-bottom: 1vw;
-  font-size: 1.2vw;
-  line-height: 2.8vw;
-}
-
-.pricing .card_1{
- background-color: transparent;
- 
-}
-.pricing .card_2{
-
-   border-width: 3px 3px 3px 0px;
-
-
-}
-.pricing .card_3{
- background-color: transparent;
- 
+  /* margin-bottom: 1vw; */
+  /* font-size: 1.2vw; */
+  /* line-height: 2.8vw; */
 }
 
 
@@ -742,13 +745,14 @@ details[open] summary .arrow {
 
 /* INDIVIDUAL CARD */
 .blog-card {
-    width: 23vw;
+    width: 40vw;
+    
 }
 
 .blog-img {
-    width: 23vw;
-    height: 14vw;
-    object-fit: cover;
+    width: 29vw;
+    margin-bottom: 1vw;
+   
     border-radius: 0.7vw;
 }
 
@@ -798,18 +802,7 @@ details[open] summary .arrow {
     font-size: 1vw;
 }
 
-.newsletter-form button {
-    padding: 0.9vw 2vw;
-    font-size: 0.9vw;
-    font-weight: 600;
-    background-color: white;
-    border: 0.1vw solid rgba(0,0,0,0.15);
-    border-radius: 0.5vw;
-    color: #4a1e0e;
-    cursor: pointer;
-    box-shadow: 0 0.3vw 0.8vw rgba(0,0,0,0.05);
-    text-transform: uppercase;
-}
+
 
 
 /* ---------------- MAP SECTION ---------------- */
@@ -835,66 +828,65 @@ details[open] summary .arrow {
     width: 28vw;
     padding: 2vw;
     background: white;
-    border-radius: 0.8vw;
-    box-shadow: 0 0.8vw 2vw rgba(0,0,0,0.1);
+    border-radius: 5px;
+    /* align-items: right; */
+    display: flex;
+    flex-direction: column;
 z-index: 400;
+gap: 1vw;
   }
 
-.contact-card h3 {
-    font-size: 1.8vw;
-    margin-bottom: 1.5vw;
+.contact-card input, select{
+  padding-left: 0.5vw;
+  height: 2vw;
+  border-radius: 5px;
+  border-color: #ef6d58;
 }
-
-.contact-card input,
-.contact-card select,
 .contact-card textarea {
-    width: 100%;
-    padding: 1vw;
-    border-radius: 0.6vw;
-    border: 0.15vw solid #ddd;
-    margin-bottom: 1.2vw;
-    font-size: 1vw;
+   padding-left: 0.5vw;
+   padding-top: 0.5vw;
+  height: 7vw;
+  border-radius: 5px;
+  border-color: #ef6d58;
+
 }
-
-.contact-card textarea {
-    height: 8vw;
-    resize: none;
+.contact-card button{
+  background-color: #ff6a4d;
+   border-radius: 5px;
+  margin-left: 18vw;
+  width: 10vw;
 }
-
-.contact-card button {
-    padding: 1vw 2vw;
-    background: #f47c63;
-    border: none;
-    border-radius: 0.6vw;
-    color: white;
-    font-size: 1vw;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-
 /* ---------------- INFO BOXES ---------------- */
 .info-boxes {
-    display: flex;
-    justify-content: space-between;
-    padding: 5vw;
-   
+  display: flex;
+  padding: 5vw;
+  align-items: center;
+  justify-content: center;
 }
 
 .info-item {
-    width: 30%;
-    padding: 2vw;
-    border: 2px solid ;
+  width: 30vw;
+  padding: 2vw;
 }
 
-.info-item h4 {
-    font-size: 1.4vw;
-    margin-bottom: 1vw;
+.info-item div {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
 }
 
-.info-item p {
-    font-size: 1.1vw;
+.info-boxes .box_1,
+.info-boxes .box_2,
+.info-boxes .box_3 {
+  background: transparent;
+  border: 3px solid #f3d1bf;
 }
+
+.info-boxes .box_2,
+.info-boxes .box_3 {
+  border-left: 0;
+}
+
 .dream_Project{
   padding: 5vw;
   color: white;
