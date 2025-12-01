@@ -1,3 +1,5 @@
+// ---------------- NAVBAR MENU ----------------
+
 const menuToggle = document.getElementById('menuToggle');
 const mobileMenu = document.getElementById('mobileMenu');
 const hamburgerIcon = document.getElementById('hamburgerIcon');
@@ -7,7 +9,7 @@ let menuOpen = false;
 
 function toggleMenu() {
     menuOpen = !menuOpen;
-    
+
     mobileMenu.classList.toggle('menuHidden');
     mobileMenu.classList.toggle('menuVisible');
 
@@ -16,7 +18,7 @@ function toggleMenu() {
 }
 
 function closeMenu() {
-    if(menuOpen) {
+    if (menuOpen) {
         toggleMenu();
     }
 }
@@ -32,3 +34,14 @@ window.addEventListener('resize', () => {
         closeMenu();
     }
 });
+
+
+// ---------------- LEAFLET MAP ----------------
+
+var map = L.map('map').setView([19.07617747318604, 72.87748570104678], 15);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+}).addTo(map);
+
+L.marker([19.07617747318604, 72.87748570104678]).addTo(map);
