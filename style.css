@@ -29,7 +29,7 @@ h5 {
   margin-bottom: 2.5vw;
 }
 h6{
-  font-size: 4vw;
+  font-size: 2.5vw;
 }
   p {
   font-size: 1.4vw;
@@ -259,7 +259,7 @@ section{
 }
 .numbers div {
   border: 1px solid #f3d1bf;
-  padding: 2.5vw 13vw 1vw 4vw;
+  padding: 2vw 12vw 1vw 4vw;
 }
 .numbers p {
   margin-top: 0.5vw;
@@ -615,11 +615,15 @@ details[open] summary .arrow {
     padding: 5vw;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+   
+    align-items:start;
+
 }
 .newsletter-form {
     display: flex;
     gap: 1vw;
+}
+.newsletter-form h4{
 }
 .newsletter-form input {
     width: 20vw;
