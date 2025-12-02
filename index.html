@@ -9,6 +9,8 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://unpkg.com/motion/dist/motion.min.js"></script>
+
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
@@ -100,7 +102,7 @@
             </div>
         </div>
 
-        <div class="about">
+        <div class="about" id="about">
 
             <div class="about_content content">
                 <img class="about_Image" src="images/experience.svg" alt="">
@@ -228,7 +230,7 @@
 
         </div>
 
-        <div class="service about">
+        <div class="service about" id="services">
 
             <div class="content">
                 <img class="about_Image" src="images/service_image.svg" alt="">
@@ -300,99 +302,105 @@
             </div>
         </div>
 
-        <div class="testimonials">
-            <div class="testimonial_style">
-                <h2>Testimonials</h2>
-                <h3>What Our
-                    Clients Saying</h3>
-            </div>
-            <div class="testimonial_cards ">
-                <div class="testimonial_group">
-                    <div class="card">
+       <div class="testimonials">
+  <div class="testimonial_style">
+    <h2>Testimonials</h2>
+    <h3>What Our<br>Clients Saying</h3>
+  </div>
 
-                        <img class="star" src="images/star.svg" alt="">
+  <div class="testimonial_cards">
 
-                        <p class="paragraph">A digital agency is a business you hire to outsource your digital marketing
-                            efforts, instead of handling in-house. They can provide your business with a variety of
-                            digital solutions to promote your product or service online and help you.</p>
+    <div class="testimonial_group">
+      <div class="card">
+        <img class="star" src="images/star.svg" alt="stars">
 
-                       <div class="meta">
-                            <div>
-                                <img src="images/alan.svg" alt="">
-                            </div>
-                            <div>
-                                <h5>Alan Martí</h5>
-                                    <p class="paragraph">Meta Inc.</p>
-                            </div>
-                        </div>
+        <p class="paragraph">
+          A digital agency is a business you hire to outsource your digital
+          marketing efforts, instead of handling in-house. They can provide your
+          business with a variety of digital solutions to promote your product
+          or service online and help you.
+        </p>
 
-                    </div>
-                    <div class="card card_1">
-
-                        <img class="star" src="images/star.svg" alt="">
-
-                        <p class="paragraph">Outsource your digital marketing efforts, instead of handling in-house.
-                            They can provide your business with a variety.</p>
-
-                        <div class="meta">
-                            <div>
-                                <img src="images/graham.svg" alt="">
-                            </div>
-                            <div>
-                                <h5>Graham Griffiths</h5>
-                                    <p class="paragraph">Twitor</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="testimonial_group">
-                    <div class="card card_2">
-
-                        <img class="star" src="images/star.svg" alt="">
-                        <p class="paragraph">Outsource your digital marketing efforts, instead of handling in-house.
-                            They can provide your business with a variety.</p>
-
-                        <div class="meta">
-                            <div>
-                                <img src="images/richardo.svg" alt="">
-                            </div>
-                            <div>
-                                <h5>Richardo Kann</h5>
-                                    <p class="paragraph">Photogram</p>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="card card_3">
-
-                        <img class="star" src="images/star.svg" alt="">
-
-                        <p class="paragraph">Promote your product or service online and help you hit your marketing
-                            goals and grow your business.</p>
-
-                        <div class="meta">
-                            <div>
-                                <img class="" src="images/maria.svg" alt="">
-                            </div>
-                            <div>
-                                <h5>Maria Trofimova</h5>
-                                    <p class="paragraph">Whochat</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-            <div class="button">
-                <button class=" ">SEE ALL</button>
-
-            </div>
+        <div class="meta">
+          <div>
+            <img src="images/alan.svg" alt="Alan Martí">
+          </div>
+          <div>
+            <p class="read_more">Alan Martí</p>
+            <p class="paragraph">Meta Inc.</p>
+          </div>
         </div>
+      </div>
 
-        <div class="pricing">
+      <div class="card card_1">
+        <img class="star" src="images/star.svg" alt="stars">
+
+        <p class="paragraph">
+          Outsource your digital marketing efforts, instead of handling in-house.
+          They can provide your business with a variety.
+        </p>
+
+        <div class="meta">
+          <div>
+            <img src="images/graham.svg" alt="Graham Griffiths">
+          </div>
+          <div>
+            <h5>Graham Griffiths</h5>
+            <p class="paragraph">Twitor</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial_group">
+      <div class="card card_2">
+        <img class="star" src="images/star.svg" alt="stars">
+
+        <p class="paragraph">
+          Outsource your digital marketing efforts, instead of handling in-house.
+          They can provide your business with a variety.
+        </p>
+
+        <div class="meta">
+          <div>
+            <img src="images/richardo.svg" alt="Richardo Kann">
+          </div>
+          <div>
+            <h5>Richardo Kann</h5>
+            <p class="paragraph">Photogram</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card_3">
+        <img class="star" src="images/star.svg" alt="stars">
+
+        <p class="paragraph">
+          Promote your product or service online and help you hit your marketing
+          goals and grow your business.
+        </p>
+
+        <div class="meta">
+          <div>
+            <img src="images/maria.svg" alt="Maria Trofimova">
+          </div>
+          <div>
+            <h5>Maria Trofimova</h5>
+            <p class="paragraph">Whochat</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="button">
+    <button>SEE ALL</button>
+  </div>
+</div>
+
+
+        <div class="pricing" id="pricing">
             <div class="pricing-container">
                 <h2>PRICING</h2>
                 <h3>Check Our
@@ -532,7 +540,7 @@
             <span class="award-title">KeyBoard</span>
         </div>
 
-        <span class="award-date">&nbsp; &nbsp;&nbsp; &nbsp;19 Oct, 2021</span>
+        <span class="award-date">19 Oct, 2021</span>
 
         <div class="right">
             <span class="award-type">CSS Design Awards</span>
@@ -549,7 +557,7 @@
         <span class="award-date">7 Oct, 2021</span>
 
         <div class="right">
-            <span class="award-type">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; The FWA</span>
+            <span class="award-type">The FWA</span>
             <img src="images/fwa.svg" class="award-logo">
         </div>
     </div>
@@ -560,7 +568,8 @@
 
 </div>
 
-<div class="blog-section">
+
+<div class="blog-section" id="blog">
 
     <h2>OUR BLOG</h2>
     <div class="blog-header">
@@ -608,7 +617,7 @@
     <div id="map"></div>
 
     <div class="contact-card">
-        <h4>Get In Touch</h4>
+        <h5>Get In Touch</h4>
         <input type="email" placeholder="Your email" />
         <select>
             <option>Subject</option>
