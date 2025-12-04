@@ -35,7 +35,6 @@ window.addEventListener('resize', () => {
     }
 });
 
-
 // ---------------- LEAFLET MAP ----------------
 
 var map = L.map('map').setView([19.07617747318604, 72.87748570104678], 15);
