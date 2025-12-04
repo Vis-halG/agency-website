@@ -458,7 +458,7 @@ border-color: #f3d1bf;
 .pricing .card_1{
  background-color: transparent;
   border-width: 3px 0px 3px 3px;
-  
+
 }
 .pricing .card_1 button, .card_3 button{
   background-color: white;
@@ -524,7 +524,8 @@ summary .arrow {
 }
 details[open] summary .arrow {
   transform: rotate(-135deg);
-}.awards-section {
+}
+.awards-section {
   padding: 5vw;
   text-align: center;
 }
@@ -532,7 +533,6 @@ details[open] summary .arrow {
 .award-row {
   display: flex;
   align-items: center;
-  /* justify-content: space-between;  <-- isko hata do */
   padding: 2vw 0;
   border-top: 0.1vw solid rgba(0,0,0,0.1);
 }
@@ -628,7 +628,7 @@ details[open] summary .arrow {
     padding: 5vw;
     display: flex;
     justify-content: space-between;
-   
+
     align-items:start;
 
 }
@@ -686,12 +686,6 @@ gap: 1vw;
   border-radius: 5px;
   border-color: #ef6d58;
 }
-/* .contact-card button{
-  background-color: #ff6a4d;
-   border-radius: 5px;
-  margin-left: 18vw;
-  width: 10vw;
-} */
 .info-boxes {
   display: flex;
   padding: 5vw;
@@ -701,7 +695,7 @@ gap: 1vw;
 .info-item {
   width: 30vw;
   padding: 1.5vw;
-  
+
   background: transparent;
 }
 .info-boxes .box_1, .box_3{
@@ -751,7 +745,8 @@ border-color: #f3d1bf;
   display: flex;
   align-items: center;
   background-color: #ef6d58;
-}.dream_Content .paragraph{
+}
+.dream_Content .paragraph{
   color: white;
 }
 .dream_Project button{
@@ -948,7 +943,7 @@ border-color: #f3d1bf;
   }
   .paragraph {
     font-size: 3.3vw;
-   
+
   }
   .read_more{
     font-size:3vw;
@@ -997,11 +992,6 @@ border-color: #f3d1bf;
     padding: 5vw;
     gap: 3vw;
     display: block;
-    /* flex-direction: column-reverse; */
-    /* flex-direction: ;
-    align-items: center;
-    justify-content: center;
-    align-content: center; */
   }
   .content p {
     margin-bottom: 5vw;
@@ -1032,12 +1022,11 @@ border-color: #f3d1bf;
     padding-top: 10vw;
   }
   .numbers {
-    
+
     padding-top: 10vw;
     display: block;
   }
   .numbers div {
-    /* border: 1px solid #f3d1bf; */
     padding: 10vw 5vw 10vw 10vw;
   }
   .howWeWork {
@@ -1129,15 +1118,10 @@ display: block;
 .service_two_card .development{
    border-width: 0px 3px 0px 3px;
 }
-.testimonials {}
-
-
-
 .testimonial_cards{
   display: block;
 }
 .testimonials .card{
- 
   width: 68vw;
 }
 .testimonials .card .star{
@@ -1169,10 +1153,9 @@ border-color: #f3d1bf;
 }
 .testimonials .meta {
     display: flex !important;
-    /* align-items: flex-start !important; */
     justify-content: flex-start !important;
     gap: 3vw !important;
-    margin: 4vw 0 0 0 !important; /* left align */
+    margin: 4vw 0 0 0 !important;
 }
 
 .testimonials .meta img {
@@ -1216,13 +1199,13 @@ border-color: #f3d1bf;
   padding-left: 5.5vw;
   font-size: 2.2vw;
   line-height: 6vw;
-  
+
 }
 .pricing ul .minus {
   background: url("images/minus.svg") no-repeat left center;
   background-size: 4vw;
   padding-left: 5.5vw;
- 
+
 }
 .faq{
   padding: 5vw;
@@ -1267,22 +1250,22 @@ details[open] summary .arrow {
 
   .award-row {
       display: flex;
-      flex-direction: column;   /* ✔ All items in 1 column */
+      flex-direction: column;
       align-items: center;
       gap: 3vw;
       padding: 8vw 0;
-      border-top: 0.3vw solid rgba(0,0,0,0.1);  /* ✔ Thin divider line */
+      border-top: 0.3vw solid rgba(0,0,0,0.1);
   }
 
   .left {
       display: flex;
-      flex-direction: column;   /* ✔ Image above title */
+      flex-direction: column;
       align-items: center;
       gap: 2vw;
   }
 
   .award-img {
-      width: 40vw;              /* ✔ Perfect mobile size */
+      width: 40vw;
       border-radius: 2vw;
   }
 
@@ -1298,7 +1281,7 @@ details[open] summary .arrow {
 
   .right {
       display: flex;
-      flex-direction: column;    /* ✔ Award type above logo */
+      flex-direction: column;
       align-items: center;
       gap: 2vw;
   }
@@ -1363,7 +1346,6 @@ details[open] summary .arrow {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-   
     align-items:start;
 
 }
@@ -1380,7 +1362,6 @@ details[open] summary .arrow {
     height: 5vw;
     padding-left: 4vw;
     border-radius: 0.5vw;
-    /* border: 0.1vw solid rgba(0, 0, 0, 0.2); */
     font-size: 3vw;
 }
 .map-section {
@@ -1425,7 +1406,6 @@ gap: 1vw;
 .contact-card button{
   background-color: #ff6a4d;
   padding: 1vw;
-  /* height: 2vw; */
   font-size: 2vw;
 }
 .info-boxes {
@@ -1468,7 +1448,8 @@ border-color: #f3d1bf;
   flex-direction: column-reverse;
   align-items: center;
   background-color: #ef6d58;
-}.dream_Content .paragraph{
+}
+.dream_Content .paragraph{
   color: white;
 }
   .footer {
@@ -1477,7 +1458,6 @@ border-color: #f3d1bf;
     text-align: center;
   }
 
-  /* Top part: sab column me, center */
   .footer-top {
     display: flex;
     flex-direction: column;
@@ -1508,7 +1488,6 @@ border-color: #f3d1bf;
     color: #2d1b14;
   }
 
-  /* Social icons center */
   .social {
     display: flex;
     justify-content: center;
@@ -1525,7 +1504,6 @@ border-color: #f3d1bf;
     margin: 8vw 0 6vw;
   }
 
-  /* Bottom part: text upar, links neeche */
   .footer-bottom {
     display: flex;
     flex-direction: column;
@@ -1550,11 +1528,6 @@ border-color: #f3d1bf;
     font-size: 3vw;
   }
 }
-
-
-
-
-
 
 /* NAVBAR HOVER */
 .navLink {
