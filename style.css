@@ -6,22 +6,23 @@ body {
   font-family: "Epilogue", sans-serif;
 }
  h2 {
-  font-size: 1vw;
+  font-size: clamp(0.7rem, 2vw, 1.2rem ) ;
   color: #ef6d58;
   font-weight: 500;
   letter-spacing: 0.2vw;
   margin-bottom: 2.5vw;
-}
+ }
+
   h1 {
-  font-size: 6.5vw;
+  font-size:clamp(3.5rem, 6vw, 12rem);
   margin-bottom: 2.5VW;
 }
 h3 {
-  font-size: 4vw;
+  font-size: clamp(2.5rem, 4.5vw, 11rem);
   margin-bottom: 2.5vw;
 }
 h4 {
-  font-size: 3.4vw;
+  font-size: clamp( 2rem, 3.5vw, 10rem);
   margin-bottom: 2.5vw;
 }
 h5 {
@@ -829,15 +830,7 @@ border-color: #f3d1bf;
   .paragraph {
     font-size: 1.3vw;
   }
-  h2 {
-    font-size: 1.7vw;
-  }
-  h3 {
-    font-size: 4vw;
-  }
-  h5 {
-    font-size: 1.4vw;
-  }
+
   .modern_Image {
     width: 35vw;
   }
@@ -878,15 +871,8 @@ border-color: #f3d1bf;
     border-radius: 0.375rem;
     width: auto;
   }
-  h1 {
-  font-size: 6vw;
-}
-  h3 {
-    font-size: 4.5vw;
-  }
-  h5 {
-    font-size: 1.4vw;
-  }
+
+ 
   p {
     font-size: 2vw;
   }
@@ -948,27 +934,7 @@ border-color: #f3d1bf;
   .read_more{
     font-size:3vw;
   }
-  h1 {
-    font-size: 15vw;
-    line-height: 16vw;
-  }
-  h2 {
-    margin-bottom: 4.5vw;
-    font-size: 3vw;
-  }
-  h3 {
-    font-size: 10vw;
-  }
-  h4 {
-    font-size: 9vw;
-    margin-top: 2vw;
-  }
-  h5 {
-    font-size: 4.5vw;
-  }
-  h6{
-    font-size: 8vw;
-  }
+ 
   .modern_Image {
     width: 90vw;
   }
