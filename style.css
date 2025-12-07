@@ -18,7 +18,7 @@ body {
   margin-bottom: 2.5VW;
 }
 h3 {
-  font-size: clamp(2.5rem, 4.5vw, 11rem);
+  font-size: clamp(2.8rem, 4.5vw, 11rem);
   margin-bottom: 2.5vw;
 }
 h4 {
@@ -26,24 +26,27 @@ h4 {
   margin-bottom: 2.5vw;
 }
 h5 {
-  font-size: 1.5vw;
+  font-size: clamp(1.2rem, 1.5vw, 2rem);
   margin-bottom: 2.5vw;
 }
 h6{
-  font-size: 2.5vw;
+  font-size: clamp(3rem, 5vw, 3.5rem);
+
 }
   p {
-  font-size: 1.4vw;
-  line-height: 2.5vw;
+  font-size: clamp(1rem, 5.5vw, 1.4rem);
+  line-height: 1.5;
   margin-bottom: 1.5vw;
 }
    .paragraph {
-  font-size: 1vw;
+  font-size: clamp(0.7rem, 1vw, 1.5rem);
   color: #391400a3;
+   line-height: 2.5;
 }
   .read_more{
-    font-size: 1.2vw;
+    font-size:clamp(1rem, 1.5vw, 1.5rem);
   }
+/* DEFAULT GLOBAL BUTTON */
 button {
   background-color: #404351;
   color: #ffffff;
@@ -54,13 +57,23 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 150ms ease-in-out, border-color 150ms ease-in-out;
+  transition: 
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease;
   width: auto;
   box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.15);
 }
+
+/* HOVER — Apply Orange to EVERY Button */
 button:hover {
-  box-shadow: 0 0.8vw 1.6vw rgba(0, 0, 0, 0.22);
+  transform: translateY(-0.3vw);
+  background-color: #ef6d58 !important;
+  color: #ffffff !important;
+  box-shadow: 0 0.6vw 1.2vw rgba(239, 109, 88, 0.35);
 }
+
 .modern_Image {
   width: 90vw;
 }
@@ -253,18 +266,38 @@ section{
   color: black;
 }
 .numbers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: transparent;
   padding: 5vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: left;
 }
-.numbers div {
+
+.num-item {
   border: 1px solid #f3d1bf;
-  padding: 2vw 12vw 1vw 4vw;
+  padding: clamp(1rem, 4vw, 3rem);
+
+  /* FIX FOR SMOOTHNESS */
+  transition: all 0.35s ease;
 }
-.numbers p {
-  margin-top: 0.5vw;
+
+.num-item h6 {
+  margin-bottom: 0.5rem;
 }
+
+.num-item p {
+  margin: 0;
+}
+
+.numbers .num-item:hover {
+  border: none;
+  transform: translateY(-0.6vw);
+  box-shadow: 0 1.2vw 2.4vw rgba(239, 109, 88, 0.25);
+  border-color: #ef6d58;
+  background: #ffffff;
+}
+
+
 .howWeWork {
   padding: 6vw;
   display: flex;
@@ -331,31 +364,53 @@ section{
   margin-top: 1vw;
   cursor: pointer;
 }
-.features_Two {
-  display: flex;
-  align-items: center;
-}
+/* GRID LAYOUT */
 .features-cards {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: end;
 }
-.card {
+
+/* LEFT CARD */
+.features-cards .card {
   background-color: #fff;
   padding: 2vw;
   border: 3px solid #f3d1bf;
+  /* border-right: none; */
   display: flex;
   flex-direction: column;
 }
-.light {
-  background-color: #fff;
+
+/* RIGHT CARD */
+.features-cards .light {
   padding: 2vw;
-  border-width: 3px 3px 3px 0;
-border-style: solid;
-border-color: #f3d1bf;
+  border: 3px solid #f3d1bf;
+  border-left: none;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
-  background-color: transparent;
+}
+
+/* HOVER EFFECT — Lift + Glow */
+.features-cards .card,
+.features-cards .light {
+  transition: all 0.35s ease;
+}
+
+.features-cards .card:hover,
+.features-cards .light:hover {
+  transform: translateY(-0.6vw);
+  box-shadow: 0 1.2vw 2.4vw rgba(239, 109, 88, 0.25);
+  border-color: #ef6d58;
+  background: #ffffff;
+}
+
+.features-cards .card:hover {
+  border: none;
+}
+
+.features-cards .light:hover {
+  border: none;
 }
 .icon-wrap {
   position: relative;
@@ -381,24 +436,43 @@ border-color: #f3d1bf;
 .service .meta{
   margin-bottom: 2.5vw;
 }
-.service_two{
+.service_two {
   padding: 5vw;
   display: flex;
   flex-direction: column;
 }
-.service_two .service{
+
+/* GRID layout */
+.service_two_card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* gap: 2vw; */
 }
-.service_two_card{
-  display: flex;
-}
-.service_two .card{
+
+/* DEFAULT CARD (border visible always) */
+.service_two .card {
   background-color: transparent;
+  padding: 2vw;
+  border: 3px solid #f3d1bf;  /* FIXED — always visible border */
+  transition: all 0.35s ease;
 }
-.service_two .development{
+
+/* Middle card original design */
+.service_two .development {
   border-width: 3px 0px 3px 0px;
-border-style: solid;
-border-color: #f3d1bf;
+  border-style: solid;
+  border-color: #f3d1bf;
 }
+
+/* HOVER EFFECT — lift + glow + orange border */
+.service_two .card:hover {
+  border: none;
+  transform: translateY(-0.6vw);
+  box-shadow: 0 1.2vw 2.4vw rgba(239, 109, 88, 0.25);
+  border-color: #ef6d58;   /* border stays visible */
+  background: #ffffff;
+}
+
 .testimonials{
   padding: 5vw;
 display: flex;
@@ -413,26 +487,24 @@ align-items: center;
   display: flex;
 }
 .testimonials .card{
-  width: 39.3vw
+padding: 2.5vw;
+  border: 3px solid #f3d1bf;
+  width: 39.5vw;
 }
 .testimonials .card .star{
   width: 10vw;
   margin-bottom: 2.5vw;
 }
-.testimonials .card_1{
-  background-color: transparent;
-   border-width: 0px 3px 3px 3px;
-border-style: solid;
-border-color: #f3d1bf;
+.testimonials .card_0{
+  background-color: white;
+  border-bottom: none;
 }
-.testimonials .card_2, .card_3{
-  background-color: transparent;
-   border-width: 3px 3px 3px 0px;
-border-style: solid;
-border-color: #f3d1bf;
+.testimonials .card_2{
+ border-left: none;
+ border-bottom: none;
 }
 .testimonials .card_3{
-  border-width: 0px 3px 3px 0px;
+ border-left: none;
 }
 .testimonials button{
   margin-top: 2.5vw;
@@ -443,6 +515,18 @@ border-color: #f3d1bf;
   margin-bottom: 0vw;
 
 }
+.testimonials .card {
+  transition: all 0.35s ease;
+}
+
+.testimonials .card:hover {
+  border: none;
+  transform: translateY(-0.6vw);
+  box-shadow: 0 1.2vw 2.4vw rgba(239, 109, 88, 0.25);
+  border-color: #ef6d58;
+  background: #ffffff;
+}
+
 .pricing{
   padding: 5vw;
 }
@@ -456,24 +540,35 @@ border-color: #f3d1bf;
   display: flex;
   align-items: end;
 }
-.pricing .card_1{
- background-color: transparent;
-  border-width: 3px 0px 3px 3px;
 
+.pricing .card{
+  padding: 2vw;
+   border: 3px solid #f3d1bf;
 }
 .pricing .card_1 button, .card_3 button{
   background-color: white;
   color: #000000;
 }
+.pricing .card_1{
+ background-color: transparent;
+ border-right: none;
+}
 .pricing .card_2{
-   border-width: 3px 3px 3px 3px;
+   background-color: #fff;
+}
+.pricing .popular{
+  font-size: 2vw;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
 }
 .pricing .card_3{
- background-color: transparent;
+border-left: none;
+  background-color: transparent;
 }
 .pricing .card_2 button{
   background-color: #ef6d58;
 }
+.pricing .popular{}
 .pricing ul {
   list-style: none;
   padding-left: 0;
@@ -824,9 +919,7 @@ border-color: #f3d1bf;
     border-radius: 0.375rem;
     width: auto;
   }
-  p {
-    font-size: 1.7vw;
-  }
+
   .paragraph {
     font-size: 1.3vw;
   }
@@ -850,16 +943,8 @@ border-color: #f3d1bf;
     margin-top: 0vw;
     margin-bottom: 0vw;
   }
-  .numbers {
-  padding: 5vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.numbers div {
-  border: 1px solid #f3d1bf;
-  padding: 3vw 10vw 1vw 4vw;
-}
+
+
 .numbers p {
   margin-top: 0.5vw;
 }
@@ -873,9 +958,6 @@ border-color: #f3d1bf;
   }
 
  
-  p {
-    font-size: 2vw;
-  }
   .paragraph {
     font-size: 1.6vw;
   }
@@ -908,11 +990,8 @@ border-color: #f3d1bf;
     width: 5vw;
     height: 5vw;
   }
-.numbers div {
-  border: 1px solid #f3d1bf;
-  padding: 4vw 7vw 2vw 4vw;
-}
-  .features ul li {
+
+.features ul li {
     font-size: 1.7vw;
   }
 }
@@ -923,10 +1002,7 @@ border-color: #f3d1bf;
     border-radius: 0.375rem;
     width: auto;
   }
-  p {
-    font-size: 3.8vw;
-    line-height: 5vw;
-  }
+ 
   .paragraph {
     font-size: 3.3vw;
 
@@ -987,14 +1063,14 @@ border-color: #f3d1bf;
   .about{
     padding-top: 10vw;
   }
-  .numbers {
+   .numbers {
+    grid-template-columns: 1fr;
+  }
 
-    padding-top: 10vw;
-    display: block;
+  .num-item {
+    padding: 8vw;
   }
-  .numbers div {
-    padding: 10vw 5vw 10vw 10vw;
-  }
+
   .howWeWork {
     padding-top: 10vw;
     background-color: #fdf0e9;
@@ -1034,26 +1110,12 @@ border-color: #f3d1bf;
   align-items: center;
 }
 .features-cards {
-  display: block;
-  justify-content: center;
-  align-items: flex-end;
-}
-.card {
-  background-color: #fff;
-  padding: 10vw;
-  border: 3px solid #f3d1bf;
-  display: flex;
-  flex-direction: column;
-}
-.light {
-  background-color: #fff;
-  padding: 10vw;
-  border-width: 0px 3px 3px 3px;
-border-style: solid;
-border-color: #f3d1bf;
-  display: flex;
-  flex-direction: column;
-  background-color: transparent;
+    grid-template-columns: 1fr;
+  }
+.features-cards .light {
+  border-left: 3px solid #f3d1bf;
+  border-top: none;
+ 
 }
 .icon-wrap {
   position: relative;
@@ -1078,36 +1140,36 @@ border-color: #f3d1bf;
   font-size: 3vw;
   line-height: 4vw;
 }
-.service_two .service_two_card{
-display: block;
+  .service_two_card {
+    grid-template-columns: 1fr;
+  }
+  .service_two .development {
+  border-width: 0px 3px 0px 3px;
+  border-style: solid;
+  border-color: #f3d1bf;
 }
-.service_two_card .development{
-   border-width: 0px 3px 0px 3px;
-}
+
 .testimonial_cards{
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
+
 .testimonials .card{
-  width: 68vw;
+padding: 5vw;
+  border: 3px solid #f3d1bf;
+  width: 79vw;
 }
-.testimonials .card .star{
-  width: 30vw;
-  margin-bottom: 5vw;
+.testimonials .card_0{
+  background-color: white;
+  border-bottom: none;
 }
-.testimonials .card_1{
-  background-color: transparent;
-   border-width: 0px 3px 3px 3px;
-border-style: solid;
-border-color: #f3d1bf;
-}
-.testimonials .card_2, .card_3{
-  background-color: transparent;
-   border-width: 0px 3px 3px 3px;
-border-style: solid;
-border-color: #f3d1bf;
+.testimonials .card_2{
+ border-left: 3px solid #f3d1bf;
+ border-bottom: none;
+ border-top: none;
 }
 .testimonials .card_3{
-  border-width: 0px 3px 3px 3px;
+ border-left: 3px solid #f3d1bf;
 }
 .testimonials button{
   margin-top: 2.5vw;
@@ -1130,29 +1192,26 @@ border-color: #f3d1bf;
     display: block;
 }
 
-.pricing{
-  padding: 5vw;
-}
-.pricing h4 {
-  margin-bottom: 1vw;
-}
-.pricing p{
-  margin-bottom: 1VW;
-}
+
 .pricing_cards{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+.pricing .card{
+  padding: 5vw;
+   border: 3px solid #f3d1bf;
+}
 .pricing .card_1{
  background-color: transparent;
-  border-width: 3px 3px 3px 3px;
+ border-right: 3px solid #f3d1bf;
+ border-bottom: none;
 }
-.pricing .card_2{
-   border-width: 0px 3px 3px 3px;
-}
+
 .pricing .card_3{
- background-color: transparent;
+border-left: 3px solid #f3d1bf;
+border-top: none;
+  background-color: transparent;
 }
 .pricing ul {
   list-style: none;
@@ -1523,15 +1582,4 @@ border-color: #f3d1bf;
 }
 
 
-/* BUTTON HOVER — Clean & Premium */
-button {
-  transition: all 0.25s ease;
-}
 
-button:hover {
-  transform: translateY(-0.3vw);
-  background-color: #ef6d58 !important;
-  color: #ffffff !important;
-  box-shadow: 0 0.6vw 1.2vw rgba(239, 109, 88, 0.35);
-  opacity: 1;
-}
